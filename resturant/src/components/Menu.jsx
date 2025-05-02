@@ -39,18 +39,17 @@ const Menu = () => {
 
     return (
         <div className="Menu">
-            <div className="menu-header">
+            <div className="flex justify-between items-center mb-[20px]">
                 <h2>Menu</h2>
                 <ShoppingCart cart={cart} setCart={setCart} />
             </div>
-            <nav>
+            <nav className="flex flex-wrap gap-[20px] p-[20px] justify-between">
                 {menuItems.map((item, index) => (
-                    <li key={index}>
-                        <img src={item.image} alt={item.name} />
-                        <span>{item.name}</span>
-                        <p>${item.price.toFixed(2)}</p>
+                    <li key={index} className="[list-style:none] bg-[#fff] rounded-[10px] [box-shadow:0_4px_8px_rgba(0,_0,_0,_0.1)] overflow-hidden text-center p-[10px] [transition:transform_0.3s_ease-in-out] flex-[1_1_45%] m-[10px] max-w-[200px]">
+                        <img src={item.image} alt={item.name} className="w-full h-[140px] rounded-[10px] block"/>
+                        <span className="block text-[16px] font-bold text-[#333]">{item.name}</span>
+                        <p className="block text-[16px] font-bold text-[#333]">${item.price.toFixed(2)}</p>
                         <button
-                            className="add-to-cart"
                             onClick={() => addToCart(item)}
                         >
                             Add to Cart

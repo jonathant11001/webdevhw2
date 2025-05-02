@@ -4,10 +4,10 @@ import shopImage from '../assets/images/shop.png';
 const About = () => {
     return (
         <main>
-            <div className="About_image">
-                <img src={shopImage} alt="Washoku Kyo Logo" />
+            <div className="flex justify-center items-center mx-[auto] my-[20px]">
+                <img src={shopImage} alt="Washoku Kyo Logo" className="w-[30%] h-auto block"/>
             </div>
-            <div className="About_paragraph">
+            <div className="border-[3px] border-[solid] border-[orange] p-[20px] mx-[auto] my-[20px] w-4/5 rounded-[10px] [box-shadow:3px_3px_10px_rgba(0,_0,_0,_0.1)] font-[Arial,_sans-serif] leading-[1.6]">
                 <p>
                     Washoku Kyo, nestled at 6221 18th Ave in Brooklyn, NY 11204, United States, is a remarkable 
                     Japanese restaurant that offers an immersive dining experience into the heart of traditional Japanese 
